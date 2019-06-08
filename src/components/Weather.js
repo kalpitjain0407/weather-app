@@ -21,8 +21,8 @@ const Weather = (props) => {
                 }
             </div>
             <div>
-                {city === undefined || country === undefined || temperature === undefined || description === undefined && error &&
-                    <div className="weather__info"><p className="weather__value">{console.log(error) && error}</p></div>
+                {(city === undefined || country === undefined || temperature === undefined || description === undefined) && error &&
+                    <div className="weather__info"><p className="weather__value">{error}</p></div>
                 }
             </div>
         </div >

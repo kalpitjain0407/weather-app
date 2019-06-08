@@ -10,7 +10,6 @@ class Forms extends React.Component {
         }
     }
     changeCityInput = (event) => {
-        console.log(event.target.value)
         const var_city = event.target.value
         this.setState({ city: var_city })
     }

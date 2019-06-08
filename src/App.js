@@ -19,10 +19,6 @@ class App extends React.Component {
     }
     // this.getWeather=this.getWeather.bind(this)
   }
-
-
-
-
   //   componentDidMount() {
   //     this.getWeather();
   // }
@@ -33,7 +29,6 @@ class App extends React.Component {
       fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city1},${country1}&appid=${API_KEY}&units=metric`)
         .then(handleResponse)
         .then((data) => {
-          console.log(data)
           this.setState({
             city: data.name,
             country: data.sys.country,
@@ -45,7 +40,7 @@ class App extends React.Component {
     else {
       this.setState({
         error: "Please enter correct values"
-      }, () => {console.log(this.state.error)})
+      })
     }
   }
   render() {
